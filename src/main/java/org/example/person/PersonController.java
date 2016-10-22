@@ -13,6 +13,7 @@ import io.swagger.annotations.ApiResponse;
 import io.swagger.annotations.ApiResponses;
 
 @RestController
+@RequestMapping("v1")
 public class PersonController {
 
     private static final String template = "Hello, %s!";

@@ -39,13 +39,13 @@ public class PersonControllerTests {
     @Test
     public void noParamPingShouldReturnDefaultMessage() throws Exception {
 
-        this.mockMvc.perform(get("/ping")).andDo(print()).andExpect(status().isOk());
+        this.mockMvc.perform(get("/v1/ping")).andDo(print()).andExpect(status().isOk());
     }
 
     @Test
     public void paramPingShouldReturnTailoredMessage() throws Exception {
 
-        this.mockMvc.perform(get("/ping").param("name", "Spring Community"))
+        this.mockMvc.perform(get("/v1/ping").param("name", "Spring Community"))
                 .andDo(print()).andExpect(status().isOk()
                 );
     }
