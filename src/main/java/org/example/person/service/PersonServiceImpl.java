@@ -1,5 +1,6 @@
 package org.example.person.service;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import org.example.person.vo.Person;
@@ -10,6 +11,10 @@ public class PersonServiceImpl implements PersonService {
 
     @Override
     public List<Person> getAll() {
-        return null;
+
+        List<Person> list = new ArrayList<>();
+        Person person = new Person(1L, "sai", "NA");
+        list.add(person);
+        return list;
     }
 }
